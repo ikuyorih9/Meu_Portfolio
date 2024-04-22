@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width">
+		<title>Portfólio - Hugo</title>
+		<link rel = "stylesheet" href="styles/styles.css">
+		<link rel = "stylesheet" href="styles/config.css">
+		<link rel = "stylesheet" href="styles/colors.css">
+		<link rel = "stylesheet" href="styles/myPersonalStyles.css">
+		<link rel="icon" type="image/x-icon" href="resources/icon.ico">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+	</head>
+
+	
+	<body>
+		
+		<header>
+			<h1 class="h1TituloPagina">Portfólio do Huguito</h1>
+	
+			<nav>
+				<ul>
+					<li>
+						<img src="resources/home_icon.png" class="iconImage"/>
+						<button class="bPrincipal"><ins>Início</ins></button>
+					</li>
+					
+					<li>
+						<a href="sobre_mim.html">
+							<img src="resources/about_me_icon.png" class="iconImage"/>
+							<button class="bPrincipal">Sobre mim</button>
+						</a>
+					</li>
+					<li>
+						<a href="projetos.html">
+							<img src="resources/project_icon.png" class="iconImage"/>
+							<button class="bPrincipal">Projetos</button>
+						</a>
+					</li>
+				</ul>	
+			</nav>
+		</header>
+	
+		<hr>
+
+		<div class="divMainHome">
+			<img src="resources/hugo_perfil.png" class="imagePerfil"/>
+			<h1 class="h1NomeMain">Hugo Hiroyuki Nakamura</h1>
+			<div class="divSocialMediaHome">
+				<ul>
+					<li>
+						<a href="https://github.com/ikuyorih9" target="_blank">
+							<img src="resources/github_icon.png" class="iconImage"/>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/hugo-nakamura-60742a255/" target="_blank">
+							<img src="resources/linkedin_icon.png" class="iconImage"/>
+						</a>
+					</li>
+					<li>
+						<a href="mailto:hugohiroyuki9@gmail.com" target="_blank">
+							<img src="resources/gmail_icon.png" class="iconImage"/>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+
+		
+
+		<hr>
+		<footer>
+			<div class="divFooter">
+				<div>Hugo Nakamura</div>
+				<div>Copyright © 2024</div>
+			</div>
+
+			<div class="divAudio">
+				<audio autoplay loop id="audioPlayer" src="resources/Scopophobia.mp3"></audio>
+				<a href="https://www.youtube.com/watch?v=B_tYqEIWq0Q&list=PLI-tjFCI8eh0HX1nwlZzkg-kNx_9tFsfE&index=1&ab_channel=JasomMike-Topic" target="_blank"><img src="resources/scopophobia.jpg"></a>
+				<div>
+					<a href="https://www.youtube.com/watch?v=B_tYqEIWq0Q&list=PLI-tjFCI8eh0HX1nwlZzkg-kNx_9tFsfE&index=1&ab_channel=JasomMike-Topic" target="_blank">Scopophobia - HM Surf</a>
+					<div>
+						<button id="playButton" style="border-width: 0;">
+							<img id="playButtonImage" src="resources/pause_lightmode.png">
+						</button>
+	
+						<button id="muteButton" style="border-width: 0;">
+							<img id="muteButtonImage" src="resources/unmute_lightmode.png">
+						</button>
+					</div>
+				</div>
+				
+			</div>
+	
+			<script>
+				var audioPlayer = document.getElementById('audioPlayer');
+				var playButton = document.getElementById('playButton');
+				var muteButton = document.getElementById('muteButton');
+				var muteButtonImage = document.getElementById('muteButtonImage');
+				var playButtonImage = document.getElementById('playButtonImage');
+				var maxVolume = 0.5;
+	
+				audioPlayer.volume=0.5;
+
+				playButton.addEventListener('click', function(){
+					if(audioPlayer.paused){
+						audioPlayer.play();
+						playButtonImage.src="resources/pause_lightmode.png";
+	
+					}
+					else{
+						audioPlayer.pause();
+						playButtonImage.src="resources/play_lightmode.png";
+					}
+				});
+	
+				muteButton.addEventListener('click', function(){
+					if(audioPlayer.volume!==0){
+						audioPlayer.volume = 0;
+						muteButtonImage.src = "resources/mute_lightmode.png";
+					}
+					else{
+						audioPlayer.volume = maxVolume;
+						muteButtonImage.src = "resources/unmute_lightmode.png";
+					}
+				});
+
+				window.addEventListener('beforeunload', function(event) {
+					localStorage.setItem('audioTime', audioPlayer.currentTime);
+					localStorage.setItem('audioPaused', audioPlayer.paused);
+				});
+
+				window.addEventListener('load', function() {
+					var audioTime = localStorage.getItem('audioTime');
+					if (audioTime !== null) {
+						audioPlayer.currentTime = parseFloat(audioTime);
+					}
+
+					var audioPaused = localStorage.getItem('audioPaused');
+					if(audioPaused !== null){
+						if(audioPaused === 'true'){
+							audioPlayer.pause();
+							playButtonImage.src="resources/play_lightmode.png";
+						}
+						else{
+							audioPlayer.play();
+							playButtonImage.src="resources/pause_lightmode.png";
+						}
+					}
+				});
+	
+			</script>
+		</footer>
+	</body>
+</html>

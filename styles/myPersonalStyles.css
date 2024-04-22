@@ -1,0 +1,225 @@
+@keyframes fadein{
+    0% {opacity:  0;}
+    100% {opacity: 1;}
+}
+
+/*--- HEADERS ---*/
+.h1NomeMain{
+    opacity: 0;
+    font-size: var(--fontSizeNomeHome);
+    font-family: var(--fontHeader);
+    font-style: normal;
+    font-weight: 100;
+
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0px 10px 0px;
+
+    animation: fadein 2s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+/*--- IMAGES ---*/
+.divImage{
+    position:relative;
+    margin: 0 auto;
+}
+
+.imagePerfil{
+    display: block;
+    margin: 0 auto;
+    width: var(--imageHomeWidth);
+    height: var(--imageHomeHeight);
+    border-radius: 50%;
+    animation: fadein 2s ease-in-out;
+    cursor: none;
+}
+
+.iconImage{
+	cursor:pointer;
+	width: 25px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/*--- BOTÕES ---*/
+.bPrincipal{
+	height:var(--navigationHeight);
+	background-color: transparent;
+	border-width:0;
+	font-size:var(--fontButtonHeaderSize);
+    font-weight: bold;
+    color: var(--textHeaderColor);
+    
+}
+
+/*MAIN DIVS*/
+.divMainHome{
+    padding:10px 0px 10px 0px;
+}
+
+.divSocialMediaHome{
+    opacity: 0;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content:center;
+
+    animation: fadein 2s ease-in-out forwards;
+    animation-delay: 2s;
+    
+}
+
+.divSocialMediaHome ul{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content:center;
+    float: left;
+    padding: 0px 0px 0px 0px;
+    list-style-type: none;
+}
+
+.divSocialMediaHome li{
+    padding: 0px 20px 0px 20px;
+
+}
+.divAudio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px 10px 20px;
+
+}
+
+.divAudio img{
+    width: var(--imageAudioWidth);
+    height: var(--imageAudioHeight);
+    border-radius: 15px;
+}
+
+.divAudio > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5px 10px 5px 10px;
+}
+
+.divAudio > div a{
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+.divAudio > div > div{
+    padding: 5px 0px 5px 0px;
+    
+}
+
+.divAudio > div > div img{
+    width: var(--imageButtonAudioWidth);
+    height: var(--imageButtonAudioHeight);
+}
+
+.divAudio > div > div button{
+    cursor:pointer;
+    background-color: transparent;
+    margin:0px 5px 0px 5px;
+}
+
+.divSobreMimMain{
+    background-color: var(--cardColor);
+    border-radius: var(--cardRadius);
+
+    margin: var(--cardMargin);
+    padding: var(--cardPadding);
+
+    font-size: var(--fontSize);
+    
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    animation: fadein 2s ease-in-out;
+}
+
+
+.divSobreMimMain img{
+    width: var(--imageIconAboutMeWidth);
+    height: var(--imageIconAboutMeHeight);
+    border-radius: 50%;
+}
+
+.divSobreMimMain ul{
+    list-style-image: url('../resources/sobremim/sqpurple.png');
+}
+
+.divSobreMimInfo{
+    opacity: 0%;
+    background-color: var(--cardColor);
+    border-radius: var(--cardRadius);
+
+    margin: var(--cardMargin);
+    padding: var(--cardPadding);
+
+    font-size: var(--fontSize);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: fadein 2s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+.divSobreMimInfo a{
+    color:var(--textColor);
+}
+
+.divProjetos{
+    background-color: var(--cardColor);
+    border-radius: var(--cardRadius);
+
+    margin: var(--cardMargin);
+    padding: var(--cardPadding);
+
+    font-size: var(--fontSize);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: fadein 2s ease-in-out;
+    
+}
+
+.divProjetos > div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.divProjetos > div img{
+    border-radius: 10px;
+    width: 200px;
+}
+
+.divProjetos > div p{
+    text-align: justify;
+    margin: 0px 20px 0px 20px;
+}
+
+.divFooter{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.divFooter > div{
+    padding: 10px 0px 0px 10px;
+}
+

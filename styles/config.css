@@ -1,0 +1,39 @@
+:root{
+    /*FONTES*/
+    --fontSizeNomeHome:32pt;
+    --fontSize:15pt;
+    --fontTitleSize:20pt;
+    --fontFooterSize:14pt;
+
+    --fontTextColor:white;
+    --fontHeader:"Sedan";
+    --fontText:"Sedan";
+    --fontButtonHeaderSize:20px;
+
+    /*BACKGROUND*/
+    --background_image: url("../resources/background_lightmode.jpg");
+    
+
+    /*DIMENSÔES*/
+
+    --imageHomeWidth:400px;
+    --imageHomeHeight:400px;
+
+    --imageAudioWidth:75px;
+    --imageAudioHeight:75px;
+
+    --imageButtonAudioWidht:25px;
+    --imageButtonAudioHeight:25px;
+
+    --navigationHeight: 100%;
+    --navigationWidth: 50px;
+
+    --imageIconAboutMeWidth: 125px;
+    --imageIconAboutMeHeight: 125px;
+
+    --cardRadius:15px;
+}
+
+.darkmode:root{
+    --background_image: url("../resources/background_darkmode.jpg");
+}

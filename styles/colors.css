@@ -1,0 +1,35 @@
+:root{
+    --dark_purple:#301934;
+    --purple: #6f1f8f;
+    --lilac: #C8A2C8;
+    
+    --background_color: var(--lilac);
+    --navigation_color: var(--dark_purple);
+    --header_color: rgba(48,25,52,0.8);
+
+    --textColor: black;
+    --textHeaderColor: white;
+    --hoverButtonColor: rgba(200,162,200,1);
+    --hoverButtonTextColor:rgba(48,25,52,0.8);
+    --filtroHoverNavIcon:none;
+    --navIconColor:invert(100%);
+    
+    /*SOBRE MIM*/
+    --cardColor: rgba(200,162,200,
+    0.6);
+    --cardMargin:10px 10px 10px 10px;
+    --cardPadding:10px 100px 10px 100px;
+}
+
+.darkmode:root{
+    --textColor: white;
+    --textHeaderColor:var(--dark_purple);
+    --background_color: var(--dark_purple);
+    --header_color: rgba(200,162,200,0.5);
+    --hoverButtonColor:rgba(48,25,52,0.8);
+    --hoverButtonTextColor:white;
+    --filtroHoverNavIcon:invert(100%);
+    --navIconColor:none;
+
+    --cardColor:rgba(48,25,52,0.8);
+}
